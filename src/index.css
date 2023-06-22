@@ -60,3 +60,15 @@ main a:hover {
   color: var(--color-active);
   cursor: default;
 }
+
+.div-comments{
+  padding-left: 0px;
+}
+
+div ul{
+  padding-left: 20px;
+}
+
+img {
+  max-width: 300px;
+}

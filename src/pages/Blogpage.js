@@ -5,7 +5,8 @@ const Blog = () => {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
-        fetch('https://jsonplaceholder.typicode.com/posts')
+         fetch('https://jsonplaceholder.typicode.com/posts')
+        // fetch('https://jsonplaceholder.typicode.com/comments')
             .then(res => res.json())
             .then(data => setPosts(data))
     }, []);

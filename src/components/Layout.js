@@ -7,7 +7,7 @@ const Layout = () => {
             <header>
                 <NavLink to="/" className={setActive}> Home</NavLink>
                 <NavLink to="/posts" className={setActive}> Blog </NavLink>
-                <NavLink to="/about" className={setActive}> About </NavLink>
+                <NavLink to="/about" className={setActive}> API </NavLink>
             </header>
             <main className="container">
                 <Outlet/>

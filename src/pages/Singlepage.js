@@ -1,5 +1,6 @@
 import {useParams} from "react-router-dom";
 import {useState, useEffect} from "react";
+import {Comments} from "../components/Comments";
 
 const Singlepage = () => {
 
@@ -19,6 +20,7 @@ const Singlepage = () => {
                 <>
                     <h1>{post.title}</h1>
                     <p>{post.body}</p>
+                    <Comments postId={id} />
                 </>
             )}
         </div>
