@@ -1,19 +1,20 @@
 import {useEffect, useState} from "react";
 
-const id = Math.floor(Math.random() * 501);
+
 const Home = () => {
+    const id = Math.floor(Math.random() * 501);
     const [photo, setPhoto] = useState(null);
     console.log(`id = ${id}`);
 
 
-    // useEffect(() => {
-    //     fetch(`https://jsonplaceholder.typicode.com/photos/${id}`)
-    //         .then(res => res.json())
-    //         .then(data => setPhoto(data))
-    //         .catch((error) => {
-    //             console.log(error);
-    //         })
-    // });
+    useEffect(() => {
+        fetch(`https://jsonplaceholder.typicode.com/photos/${id}`)
+            .then(res => res.json())
+            .then(data => setPhoto(data))
+            .catch((error) => {
+                console.log(error);
+            })
+    },[]);
 
     return (
         <div>
