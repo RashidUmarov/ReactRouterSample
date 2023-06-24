@@ -6,9 +6,9 @@ const Home = () => {
     const [photo, setPhoto] = useState(null);
     console.log(`id = ${id}`);
 
-
     useEffect(() => {
-        fetch(`https://jsonplaceholder.typicode.com/photos/${id}`)
+        //fetch(`https://jsonplaceholder.typicode.com/photos/${id}`)
+        fetch(`https://picsum.photos/id/${id}/info`)
             .then(res => res.json())
             .then(data => setPhoto(data))
             .catch((error) => {
@@ -22,8 +22,8 @@ const Home = () => {
             <p>This is a Home page</p>
             {photo ? (
                 <>
-                    <p>Photo title: {photo.title}</p>
-                    <img src={photo.url} alt={photo.title}/>
+                    <p>Photo author: {photo.author}</p>
+                    <img src={photo.download_url} alt={photo.author}/>
                 </>
             ) : "no photo"}
 
